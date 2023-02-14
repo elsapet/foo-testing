@@ -18,7 +18,7 @@ jobs:
         id: report
         uses: bearer/curio-action@feat/add-severity-flag-support
         with:
-          severity: "critical,high"
+          severity: "high,warning"
       - id: summary
         name: Display Summary
         uses: actions/github-script@v6
