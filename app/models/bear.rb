@@ -1,17 +1,12 @@
 class Bear
-  # INTERNAL = "https://api.prod.company.internal"
+  INTERNAL = "https://api.prod.company.internal"
 
-  # def internal_url
-  #   url = "https://api.prod.company.internal"
-  #   URI(url)
-  # end
+  def log_bear
+    Rails.logger.info("Bear email: #{user.email}")
+  end
 
-  # def logo
-  #   "https://logo.clearbit.com/#{logo_domain}"
-  # end
-
-  # def test
-  #   puts internal_url
-  #   puts logo
-  # end
+  def internal_url
+    url = "https://api.prod.company.internal"
+    URI(url)
+  end
 end
