@@ -1,7 +1,5 @@
 class User
-  def ignore_me
-    Rails.logger.info(current_user.account_id)
-  end
+  WRONG_PASSWORD = "Wrong password, sorry!"
 
   def bad
     Rails.logger.warn(current_user.email)
