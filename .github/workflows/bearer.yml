@@ -16,9 +16,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run Report
         id: report
-        uses: bearer/bearer-action@main
+        uses: bearer/bearer-action@v2
         with:
-          exclude-fingerprint: "b382e4aacd23c6f4f632ba6dc153c152_0,b9c6f98c6ac3370da36e2846b99f2cde_0"
+          config-file: /foo-testing/bearer.yml
       - id: summary
         name: Display Summary
         uses: actions/github-script@v6
