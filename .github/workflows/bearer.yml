@@ -18,7 +18,7 @@ jobs:
         id: report
         uses: bearer/bearer-action@v2
         with:
-          config-file: /foo-testing/bearer.yml
+          config-file: .github/workflows/bearer-config.yml
       - id: summary
         name: Display Summary
         uses: actions/github-script@v6
