@@ -19,6 +19,7 @@ jobs:
         uses: bearer/bearer-action@v2
         with:
           config-file: ./bearer-config.yml
+          format: json
       - id: summary
         name: Display Summary
         uses: actions/github-script@v6
