@@ -14,18 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run Report
-        id: report
+      - name: Bearr Security
+        uses: bearer/bearer-action@v2
+      - name: Bearer Privacy
         uses: bearer/bearer-action@v2
         with:
           config-file: ./bearer-config.yml
           format: json
-      - id: summary
-        name: Display Summary
-        uses: actions/github-script@v6
-        with:
-          script: |
-            // github does not support multiline outputs so report is encoded
-            const report = decodeURIComponent(`${{ steps.report.outputs.rule_breaches }}`);
-            const passed = `${{ steps.report.outputs.exit_code }}` == "0";
-            if(!passed){ core.setFailed(report); }
