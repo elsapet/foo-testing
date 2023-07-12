@@ -24,4 +24,3 @@ jobs:
         uses: bearer/bearer-action@v2
         with:
           config-file: ./bearer-config.yml
-          format: json
