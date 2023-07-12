@@ -10,12 +10,16 @@ permissions:
   contents: read
 
 jobs:
-  policy_check:
+  bearer_security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Bearr Security
+      - name: Bearer Security
         uses: bearer/bearer-action@v2
+  bearer_privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: Bearer Privacy
         uses: bearer/bearer-action@v2
         with:
