@@ -23,4 +23,4 @@ jobs:
       - name: Bearer Privacy
         uses: bearer/bearer-action@v2
         with:
-          config-file: ./bearer-config.yml
+          config-file: ./bearer-privacy.yml
