@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     secretaryship_configuration = SecretaryshipConfiguration.find_by(search_params)
   end
 
+  def user_params
+    params(:user).permit(:name, :email, :admin)
+  end
+
   # def docto_false_positive
   #   secretaryship_configuration = SecretaryshipConfiguration.find_by({
   #     agenda_id: params[:agenda_id].presence,

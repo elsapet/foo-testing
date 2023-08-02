@@ -23,4 +23,5 @@ scan:
     quiet: false
     scanner:
         - sast
-    skip-path: []
+    # skip-path: [doctolib/public/*, doctolib/public/*/*/*]
+    skip-path: [doctolib/public]
