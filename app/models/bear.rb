@@ -6,6 +6,19 @@ class Bear
     URI(url)
   end
 
+  def sensitive_data_in_file_generation
+    CSV.open("path/to/user.csv", "wb") do |csv|
+      csv << ["email", "first_name", "last_name"]
+      users.each do |user|
+        csv << [
+          user.email,
+          user.first_name,
+          user.last_name
+        ]
+      end
+    end
+  end
+
   def unsafe
     Net::FTP.open("ftp.site.com") do |ftp|
       file = Tempfile.new("user_data")
