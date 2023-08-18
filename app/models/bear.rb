@@ -2,8 +2,12 @@ class Bear
   INTERNAL = "https://api.prod.company.internal"
 
   def internal_url
+    begin
     url = "https://api.prod.company.internal"
     URI(url)
+    rescue StandardError
+      raise CustomException.new(user.email)
+    end
   end
 
   def sensitive_data_in_file_generation
