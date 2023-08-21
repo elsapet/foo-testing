@@ -1,0 +1,22 @@
+name: Bearer PR Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  rule_check:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Report
+        id: report
+        uses: bearer/bearer-action@v2
+        with:
+          api-key: ${{ secrets.BEARER_TOKEN }}
+          host: 6157-169-0-57-91.ngrok-free.app
+          diff: true
