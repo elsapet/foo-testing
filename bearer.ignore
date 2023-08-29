@@ -1,0 +1,38 @@
+{
+  "111": {
+    "comment": "some comment",
+    "ignored_at": "2023-08-28T10:49:22Z"
+  },
+  "12": {
+    "comment": "migrated from bearer.yml",
+    "ignored_at": "2023-08-29T07:31:53Z"
+  },
+  "123456": {
+    "ignored_at": "2023-08-28T10:40:02Z"
+  },
+  "123456456": {
+    "author": "Mish",
+    "ignored_at": "2023-08-28T10:43:40Z"
+  },
+  "12376231867": {
+    "comment": "migrated from bearer.yml",
+    "ignored_at": "2023-08-29T07:31:25Z"
+  },
+  "345": {
+    "comment": "migrated from bearer.yml",
+    "ignored_at": ""
+  },
+  "5698": {
+    "author": "mish",
+    "comment": "hello world",
+    "ignored_at": "2023-08-28T10:44:07Z"
+  },
+  "888": {
+    "comment": "migrated from bearer.yml",
+    "ignored_at": "2023-08-28T10:53:46Z"
+  },
+  "new-fingerprint": {
+    "comment": "migrated from bearer.yml",
+    "ignored_at": "2023-08-29T07:31:25Z"
+  }
+}
