@@ -24,6 +24,7 @@ class Bear
   end
 
   def unsafe
+    Rails.logger.info("Writing user to file: ", user.email)
     Net::FTP.open("ftp.site.com") do |ftp|
       file = Tempfile.new("user_data")
       begin
@@ -36,7 +37,7 @@ class Bear
       end
     end
 
-    Net::FTP.open("example.com") do |ftp|
+    Net::FTP.open("testing.com") do |ftp|
       ftp.login
       files = ftp.chdir('pub/lang/ruby/contrib')
       files = ftp.list('n*')

@@ -17,8 +17,6 @@ jobs:
         id: report
         uses: bearer/bearer-action@v2
         with:
-          api-key: ${{ secrets.BEARER_TOKEN }}
-          host: 6157-169-0-57-91.ngrok-free.app
           diff: true
     # steps:
     #   - uses: actions/checkout@v3
