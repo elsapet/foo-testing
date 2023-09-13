@@ -1,0 +1,20 @@
+{
+  "c0bcbb038dabd943531982126b7736fa_0": {
+    "author": "elsapet",
+    "comment": "ignored from cli",
+    "false_positive": false,
+    "ignored_at": "2023-09-13T09:35:20Z"
+  },
+  "c0bcbb038dabd943531982126b7736fa_2": {
+    "author": "elsapet",
+    "comment": "allowed - legacy library",
+    "false_positive": false,
+    "ignored_at": "2023-09-07T08:26:27Z"
+  },
+  "f55f24954b91f6becd9ebf4eb2e6140d_0": {
+    "author": "elsapet",
+    "comment": "not a true case",
+    "false_positive": true,
+    "ignored_at": "2023-09-07T08:20:36Z"
+  }
+}
