@@ -1,6 +1,6 @@
 disable-version-check: false
 report:
-    exclude-fingerprint: []
+    exclude-fingerprint: [1234]
     format: ""
     no-color: false
     output: ""
