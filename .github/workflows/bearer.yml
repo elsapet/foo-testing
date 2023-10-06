@@ -1,21 +1,32 @@
-name: Bearer Cloud
+name: Bearer
 
 on:
-  workflow_dispatch:
-  pull_request:
-    types: [reopened]
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
+  # Add the security-events permission
+  security-events: write
 
 jobs:
   rule_check:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v3
-      - name: Run Report Testing
+      - name: Run Report
         id: report
-        uses: elsapet/test-bearer-action@main
+        uses: bearer/bearer-action@v2
         with:
-          api-key: ${{ secrets.BEARER_CLOUD_TOKEN }}
+          api-key: ${{ secrets.BEARER_TOKEN }}
+        # Include these two options
+          format: sarif
+          output: results.sarif
+          exit-code: 0
+    # Add a new step to upload the SARIF file
+      - name: Upload SARIF file
+        if: always()
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
