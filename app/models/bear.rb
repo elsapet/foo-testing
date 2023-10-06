@@ -1,6 +1,12 @@
 class Bear
   INTERNAL = "https://api.prod.company.internal"
 
+  def bad
+    Rails.logger.info(user.email)
+    raise CustomException.new(user.email)
+    raise "User doesn't exist #{user.email}"
+  end
+
   def internal_url
     begin
     url = "https://api.prod.company.internal"
