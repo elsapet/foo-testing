@@ -3,7 +3,7 @@ name: Bearer Cloud
 on:
   workflow_dispatch:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [reopened]
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v3
-      - name: Run Report
+      - name: Run Report Testing
         id: report
         uses: elsapet/test-bearer-action@main
         with:
