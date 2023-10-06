@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - env: test
       - name: Run Report
         id: report
         uses: bearer/bearer-action@v2
