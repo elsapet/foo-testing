@@ -8,7 +8,7 @@ class Bear
   end
 
   def bad2
-
+    Rails.logger.info(customer.email)
   end
 
   def internal_url
