@@ -20,6 +20,7 @@ jobs:
         uses: bearer/bearer-action@feat/hide-progress-bar-by-default
         with:
           api-key: ${{ secrets.BEARER_TOKEN }}
+          quiet: true
         # Include these two options
           format: sarif
           output: results.sarif
