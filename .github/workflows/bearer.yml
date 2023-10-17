@@ -1,15 +1,10 @@
 name: Bearer
-
 on:
   push:
     branches:
       - main
-
 permissions:
   contents: read
-  # Add the security-events permission
-  security-events: write
-
 jobs:
   rule_check:
     runs-on: ubuntu-latest
@@ -17,11 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run Report
         id: report
-        uses: bearer/bearer-action@feat/hide-progress-bar-by-default
+        uses: bearer/bearer-action@v2
         with:
           api-key: ${{ secrets.BEARER_TOKEN }}
-          quiet: true
-        # Include these two options
-          format: sarif
-          output: results.sarif
-          exit-code: 0
