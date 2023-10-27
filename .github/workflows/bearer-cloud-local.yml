@@ -1,4 +1,4 @@
-name: Bearer Cloud Local
+name: Bearer Cloud
 
 on:
   workflow_dispatch:
