@@ -1,4 +1,4 @@
-name: Bearer Cloud
+name: Bearer Cloud Prod
 
 on:
   workflow_dispatch:
