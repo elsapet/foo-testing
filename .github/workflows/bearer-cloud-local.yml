@@ -1,4 +1,4 @@
-name: Bearer Cloud Temp
+name: Bearer Cloud Local
 
 on:
   workflow_dispatch:
@@ -18,4 +18,4 @@ jobs:
         uses: elsapet/test-bearer-action@main
         with:
           diff: ${{ github.event.repository.default_branch != github.ref_name }}
-          api-key: ${{ secrets.BEARER_CLOUD_TOKEN }}
+          api-key: ${{ secrets.BEARER_CLOUD_LOCAL_TOKEN }}
