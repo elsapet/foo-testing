@@ -9,6 +9,7 @@ class Bear
   end
 
   def bad2
+    customer = Customer.find(1)
     Rails.logger.info(customer.email)
   end
 
