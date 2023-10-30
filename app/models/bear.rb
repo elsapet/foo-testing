@@ -9,6 +9,7 @@ class Bear
   end
 
   def bad2
+    customer = Customer.where(id: 1).first
     Rails.logger.info(customer.email)
   end
 
@@ -34,24 +35,24 @@ class Bear
     end
   end
 
-  def unsafe
-    Net::FTP.open("ftp.site.com") do |ftp|
-      file = Tempfile.new("user_data")
-      begin
-        file << [user.email, user.gender]
-        file.close
+  # def unsafe
+  #   Net::FTP.open("ftp.site.com") do |ftp|
+  #     file = Tempfile.new("user_data")
+  #     begin
+  #       file << [user.email, user.gender]
+  #       file.close
 
-        ftp.puttextfile(file.path, "/users/123.json")
-      ensure
-        file.close!
-      end
-    end
+  #       ftp.puttextfile(file.path, "/users/123.json")
+  #     ensure
+  #       file.close!
+  #     end
+  #   end
 
-    Net::FTP.open("example.com") do |ftp|
-      ftp.login
-      files = ftp.chdir('pub/lang/ruby/contrib')
-      files = ftp.list('n*')
-      ftp.getbinaryfile('nif.rb-0.91.gz', 'nif.gz', 1024)
-    end
-  end
+  #   Net::FTP.open("example.com") do |ftp|
+  #     ftp.login
+  #     files = ftp.chdir('pub/lang/ruby/contrib')
+  #     files = ftp.list('n*')
+  #     ftp.getbinaryfile('nif.rb-0.91.gz', 'nif.gz', 1024)
+  #   end
+  # end
 end
