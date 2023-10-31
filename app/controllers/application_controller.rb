@@ -20,10 +20,10 @@ class ApplicationController < ActionController::Base
   #   })
   # end{ $<_>: $<!>$<_> }
 
-  # def bad
-  #   destination_url = cookies.delete(:destination_url)
-  #   return redirect_to(destination_url, allow_other_host: true)
-  # end
+  def bad
+    destination_url = cookies.delete(:destination_url)
+    return redirect_to(destination_url, allow_other_host: true)
+  end
 
   # def also_bad
   #   csv_file = params.permit(:file).fetch(:file, nil)
