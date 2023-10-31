@@ -25,6 +25,11 @@ class ApplicationController < ActionController::Base
     return redirect_to(destination_url, allow_other_host: true)
   end
 
+  def bad_again
+    destination_url = cookies.delete(:destination_url)
+    return redirect_to(destination_url, allow_other_host: true)
+  end
+
   # def also_bad
   #   csv_file = params.permit(:file).fetch(:file, nil)
   #   File.open(csv_file) do |csv|
