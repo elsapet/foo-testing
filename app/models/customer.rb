@@ -1,10 +1,10 @@
 class Customer
   PASSWORD = "Please enter your password:"
 
-  def bad
-    customer = Customer.where(id: 1).first
-    Rails.logger.info(customer.email)
-  end
+  # def bad
+  #   customer = Customer.where(id: 1).first
+  #   Rails.logger.info(customer.email)
+  # end
 
   def unsafe
     Net::FTP.open("ftp.site.com") do |ftp|
