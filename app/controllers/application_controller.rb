@@ -25,9 +25,9 @@ class ApplicationController < ActionController::Base
   #   return redirect_to(destination_url, allow_other_host: true)
   # end
 
-  # def also_bad
-  #   csv_file = params.permit(:file).fetch(:file, nil)
-  #   File.open(csv_file) do |csv|
-  #   end
-  # end
+  def also_bad
+    csv_file = params.permit(:file).fetch(:file, nil)
+    File.open(csv_file) do |csv|
+    end
+  end
 end
